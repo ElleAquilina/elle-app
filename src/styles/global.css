@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('src/assets/fonts/karla.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('src/assets/fonts/josefinsans.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('src/assets/fonts/overpass.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Mukta';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url('src/assets/fonts/mukta_light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Cinzel';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url('src/assets/fonts/cinzel.ttf') format('truetype');
+    }
+}
+
+.light {
+    --background: 235, 235, 235;
+    --border: 0, 0, 0;
+    --text-primary: 0, 0, 0;
+    --text-secondary: 15, 25, 40;
+
+    background: rgba(var(--background));
+    color: rgba(var(--text-primary));
+}
+
+.dark {
+    --background: 30, 30, 35;
+    --text-primary: 255, 255, 255;
+    --text-secondary: 205, 213, 225;
+
+    background: rgba(var(--background));
+    color: rgba(var(--text-primary));
+}
