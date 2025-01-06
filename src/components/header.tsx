@@ -5,7 +5,7 @@ import ThemeToggle from '@/components/theme-toggle.tsx'
 function Header() {
     return (
         <>
-            <header className='flex w-full justify-between p-4'>
+            <header className='sticky top-0 flex w-full justify-between bg-red-700 p-3'>
                 <h1>Aquilina</h1>
                 <nav className='hidden space-x-4 md:block'>
                     <NavLink to='/'>About</NavLink>
