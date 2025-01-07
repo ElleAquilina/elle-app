@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button.tsx'
-import Moon from '@/assets/moon'
-import Sun from '@/assets/sun'
+import Moon from '@/components/icons/moon'
+import Sun from '@/components/icons/sun'
 
 function ThemeToggle() {
     const [theme, setTheme] = useState('dark')

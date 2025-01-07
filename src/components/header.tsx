@@ -6,7 +6,7 @@ function Header() {
     return (
         <>
             <header className='sticky top-0 flex w-full justify-between border-b border-b-border p-2 backdrop-blur'>
-                <div className='flex items-center justify-center'>
+                <div className='flex items-center justify-center pl-2'>
                     <h3>Aquilina</h3>
                 </div>
                 <div className='flex items-center justify-center'>

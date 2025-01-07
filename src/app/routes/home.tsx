@@ -1,9 +1,11 @@
-import profile from '@/assets/profile-2.jpg'
-import git from '@/assets/icons/git.svg'
-import react from '@/assets/icons/react.svg'
+import profile from '@/assets/images/profile-2.jpg'
 import { motion } from 'framer-motion'
 import WordCarousel from '@/components/word-carousel.tsx'
 import { ChevronDown } from 'lucide-react'
+import Vite from '@/components/icons/vite'
+import Typescript from '@/components/icons/typescript'
+import TailwindCSS from '@/components/icons/tailwindcss'
+import React from '@/components/icons/react'
 
 function Home() {
     const words = [
@@ -21,8 +23,10 @@ function Home() {
     ]
 
     const skills = [
-        { name: 'Git', icon: git },
-        { name: 'ReactJS', icon: react },
+        { icon: React, title: 'React' },
+        { icon: Typescript, title: 'Typescript' },
+        { icon: Vite, title: 'Vite' },
+        { icon: TailwindCSS, title: 'TailwindCSS' },
     ]
 
     return (
@@ -31,7 +35,7 @@ function Home() {
                 <div className='flex h-screen flex-col items-center justify-evenly'>
                     <div>
                         <h1>Hi there, </h1>
-                        <h1>I'm Elle Aquilina</h1>
+                        <h1>I'm Elle Aquilina.</h1>
                         <br />
                         <p>
                             I code, I tinker, and I'm always working on
@@ -64,36 +68,44 @@ function Home() {
                         <ChevronDown />
                     </motion.div>
                 </div>
-
-                <div className='p-10'>
+                <div className='flex h-screen flex-col'>
                     <h1>About Me</h1>
                     <p>
                         I'm a full-stack developer based somewhere amongst the
                         cornfields of Champaign, IL. I've been interested in
-                        tech since I was a kid- my first website in the early
-                        00's featured a table tag fueled nightmare.
-                        <br />
+                        tech since I was a kid- my first website in high school
+                        featured a table tag fueled nightmare, and around then I
+                        learned to solder my own broken devices.
+                    </p>
+                    <p>
                         Since then, I've worked professionally for a large
                         fintech company, a Canadian government grants focused
                         company, and now I'm looking for my next adventure.
-                        <br />
+                    </p>
+                    <p>
                         And my personal projects? Well, I made this website,
                         host my own personal 'cloud server' that I built myself,
                         and I'm always working on something new!
                     </p>
                 </div>
-                <div className='p-10'>
+                <div>
                     <h1>Skills</h1>
                     <div className='flex flex-wrap justify-center gap-2'>
                         {skills.map((skill) => (
-                            <div>
-                                <img src={skill.icon} alt={skill.name} />
-                                <p>{skill.name}</p>
+                            <div className='flex flex-col items-center'>
+                                <motion.div
+                                    whileHover={{
+                                        scale: 1.5,
+                                    }}
+                                >
+                                    <skill.icon className='h-10 w-10' />
+                                </motion.div>
+                                <p>{skill.title}</p>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className='p-4'>
+                <div>
                     <h1>Experience</h1>
                     <h2>Professional</h2>
                     <p>APEX Fintech Solutions</p>
@@ -103,20 +115,21 @@ function Home() {
                         most full-stack positions where you might fall into a
                         dedicated roll, I got to work on everything from cloud
                         AWS infrastructure, back-end performance improvements,
-                        rewriting our API, and upgrading and improving our
+                        personally rewriting our API for performance and
+                        security improvements, and upgrading and improving our
                         AngularJS front-end.
                     </p>
                     <p>Eperformance Inc</p>
                     <p>
-                        Providing grant applications, management, and
-                        integrations with the Government of Canada, and my first
-                        'real' full-stack job. I excelled at learning legacy
-                        softwares and implementing new features within the
-                        'confines' of our old tech and integrating into
-                        Microsoft Dynamics CRM.
+                        My first 'real' full-stack job working with the
+                        Government of Canada. I started as a technical writer
+                        and was quickly promoted to Junior Developer. I excelled
+                        at learning all the legacy systems and implementing new
+                        features within the 'confines' of our old tech and
+                        integrating into Microsoft Dynamics CRM.
                     </p>
                     <h2>Personal</h2>
-                    <p>Aquilina.cloud</p>
+                    <p>This Website! (aquilina.cloud)</p>
                     <p>
                         I wrote this website in Node, React, Vite, and
                         Typescript. I also used this to play around with some
