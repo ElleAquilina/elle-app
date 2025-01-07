@@ -11,32 +11,34 @@
         src: url('src/assets/fonts/karla.ttf') format('truetype');
     }
     @font-face {
-        font-family: 'Josefin Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('src/assets/fonts/josefinsans.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Overpass';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('src/assets/fonts/overpass.ttf') format('truetype');
-    }
-    @font-face {
         font-family: 'Mukta';
         font-style: normal;
         font-weight: 300;
         font-display: swap;
-        src: url('src/assets/fonts/mukta_light.ttf') format('truetype');
+        src: url('../assets/fonts/mukta-light.ttf') format('truetype');
     }
     @font-face {
-        font-family: 'Cinzel';
+        font-family: 'MuktaBold';
         font-style: normal;
-        font-weight: 300;
+        font-weight: 700;
         font-display: swap;
-        src: url('src/assets/fonts/cinzel.ttf') format('truetype');
+        src: url('src/assets/fonts/mukta-semibold.ttf') format('truetype');
+    }
+
+    body {
+        font: medium karla, 'ui-sans-serif', 'sans-serif';
+    }
+
+    h1 {
+        font: xx-large muktabold, 'ui-sans-serif', 'sans-serif';
+    }
+
+    h2 {
+        font: x-large mukta, 'ui-sans-serif', 'sans-serif';
+    }
+
+    h3 {
+        font: large mukta, 'ui-sans-serif', 'sans-serif';
     }
 }
 
@@ -52,6 +54,7 @@
 
 .dark {
     --background: 30, 30, 35;
+    --border: 0, 0, 0;
     --text-primary: 255, 255, 255;
     --text-secondary: 205, 213, 225;
 

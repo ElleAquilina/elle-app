@@ -15,7 +15,8 @@ function ThemeToggle() {
     }, [])
 
     useEffect(() => {
-        localStorage.setItem('theme', theme)
+        document.body.className = theme
+        //localStorage.setItem('theme', theme)
     }, [theme])
 
     function toggleTheme() {
@@ -23,7 +24,7 @@ function ThemeToggle() {
     }
 
     return (
-        <Button variant='outline' size='icon' onClick={() => toggleTheme()}>
+        <Button variant='ghost' size='icon' onClick={() => toggleTheme()}>
             <Icon />
         </Button>
     )

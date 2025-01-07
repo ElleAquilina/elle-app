@@ -16,10 +16,8 @@ module.exports = {
             },
             fontFamily: {
                 karla: ['Karla', 'ui-sans-serif', 'sans-serif'],
-                josefin: ['Josefin Sans', 'sans-serif'],
-                overpass: ['Overpass', 'sans-serif'],
                 mukta: ['Mukta', 'sans-serif'],
-                cinzel: ['Cinzel', 'serif'],
+                muktabold: ['MuktaBold', 'sans-serif'],
             },
         },
     },
