@@ -1,4 +1,6 @@
 import profile from '@/assets/profile-2.jpg'
+import git from '@/assets/icons/git.svg'
+import react from '@/assets/icons/react.svg'
 import { motion } from 'framer-motion'
 import WordCarousel from '@/components/word-carousel.tsx'
 
@@ -17,15 +19,20 @@ function Home() {
         'legacy\u00A0tech.',
     ]
 
+    const skillList = [
+        { name: 'Git', icon: git },
+        { name: 'ReactJS', icon: react },
+    ]
+
     return (
         <>
-            <div className='flex flex-col-reverse items-center justify-center bg-red-200 md:flex md:max-w-6xl md:flex-row'>
+            <div className='flex flex-col-reverse items-center justify-center md:flex md:max-w-6xl md:flex-row'>
                 <div className='p-4 md:w-2/4'>
                     <p>Hi there, </p>
                     <h1>I'm Elle Aquilina</h1>
-                    <p>I write code, and I make things work.</p>
+                    <p>I tinker, code, and am always learning.</p>
                 </div>
-                <div className='flex h-40 items-center justify-center bg-slate-500 md:w-2/4'>
+                <div className='flex h-40 items-center justify-center md:w-2/4'>
                     <motion.img
                         initial={{ opacity: 0, scale: 0.7 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -36,8 +43,8 @@ function Home() {
                     />
                 </div>
             </div>
-            <div className='flex flex-row justify-center bg-slate-300'>
-                <span>I work with&nbsp;</span>
+            <div className='flex flex-row justify-center'>
+                <span>I work on&nbsp;</span>
                 <WordCarousel words={wordCarouselList} />
             </div>
             <div className='p-4'>
@@ -45,36 +52,52 @@ function Home() {
                 <p>
                     I'm a full-stack developer based out of Champaign, IL
                     somewhere amongst the corn fields. I've been interested in
-                    tech since I was a kid, and my first website in my teen
-                    years featured a layout littered with table tags.
+                    tech since I was a kid- my first website in the 00's
+                    featured a table tag fueled nightmare.
                     <br />
-                    Since then, I've worked professionally for a government
-                    grants focused company, and a large fintech
-                    software-as-a-service company. And personally? Well, I made
-                    this website, host my own personal 'cloud server' in my
-                    basement, and I'm always working on something new!
+                    Since then, I've worked professionally for a large fintech
+                    company, a Canadian government grants focused company, and
+                    I'm looking for my next step up. And personally? Well, I
+                    made this website, host my own personal 'cloud server' that
+                    I built myself, and I'm always working on something new!
                     <br />
                     Check out more below!
                 </p>
             </div>
             <div className='p-4'>
-                <h1>Experience</h1>
-                <h2>Professional</h2>
-                <p></p>
-                <h2>Personal</h2>
-            </div>
-            <div className='p-4'>
-                <h1>Projects (Carousel Images) (Hover to website + github)</h1>
-                <div className='flex flex-row'>
-                    <h2>THIS WEBSITE</h2>
-                    <h2>Home Networking & Self Hosting</h2>
-                    <h2>XIV History</h2>
+                <h1>Skills</h1>
+                <div className='flex flex-wrap justify-center gap-2'>
+                    {skillList.map((skill) => (
+                        <div>
+                            <img src={skill.icon} alt={skill.name} />
+                            <p>{skill.name}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className='p-4'>
-                <h1>Hobbies</h1>
-                <h2>Photography</h2>
-                <p>Image carousel</p>
+                <h1>Experience</h1>
+                <h2>Professional</h2>
+                <p>APEX Fintech Solutions</p>
+                <p>
+                    A company providing tax software for large brokerages and
+                    firms- I worked here for over four years. Unlike most
+                    full-stack positions where you might fall into a dedicated
+                    roll, I got to work on everything from cloud AWS
+                    infrastructure, back-end performance improvements, rewriting
+                    our API, and upgrading and improving our AngularJS
+                    front-end.
+                </p>
+                <p>Eperformance Inc</p>
+                <p>
+                    Providing grant applications, management, and integrations
+                    with the Government of Canada, and my first 'real'
+                    full-stack job. I excelled at learning legacy softwares and
+                    implementing new features within the 'confines' of our old
+                    tech and integrating into Microsoft Dynamics CRM.
+                </p>
+                <h2>Personal</h2>
+                <p></p>
             </div>
         </>
     )
