@@ -28,6 +28,12 @@ and some of my hobbies unrelated to my professional work.
 * **Lucide React** Icons
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Sourced Components
+
+* **Button** [Shadcn][shadcn-button-url]
+* **Parralax Scroll** [Aceternity][aceternity-parallax-url]
+* **Theme Toggle** ???
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS -->
@@ -43,3 +49,5 @@ and some of my hobbies unrelated to my professional work.
 [dotenv-shield]: https://img.shields.io/badge/DotEnv-ECD53F?style=for-the-badge&logo=dotenv&logoColor=000000
 [react-url]: https://react.dev/
 [react-shield]: https://img.shields.io/badge/React-60C5DD?style=for-the-badge&logo=react&logoColor=000000
+[shadcn-button-url]: https://ui.shadcn.com/docs/components/button
+[aceternity-parallax-url]: https://ui.aceternity.com/components/parallax-scroll

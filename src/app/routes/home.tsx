@@ -2,10 +2,20 @@ import profile from '@/assets/images/profile-2.jpg'
 import { motion } from 'framer-motion'
 import WordCarousel from '@/components/word-carousel.tsx'
 import { ChevronDown } from 'lucide-react'
+import {
+    SiGit,
+    SiGithub,
+    SiJavascript,
+    SiReact,
+    SiTypescript,
+    SiTailwindcss,
+    SiJira,
+} from '@icons-pack/react-simple-icons'
+import Java from '@/components/icons/java'
 import Vite from '@/components/icons/vite'
-import Typescript from '@/components/icons/typescript'
-import TailwindCSS from '@/components/icons/tailwindcss'
-import React from '@/components/icons/react'
+import AWS from '@/components/icons/aws'
+import LinkedIn from '@/components/icons/linkedin'
+import { Button } from '@/components/ui/button.tsx'
 
 function Home() {
     const words = [
@@ -22,27 +32,31 @@ function Home() {
         'photography.',
     ]
 
-    const skills = [
-        { icon: React, title: 'React' },
-        { icon: Typescript, title: 'Typescript' },
-        { icon: Vite, title: 'Vite' },
-        { icon: TailwindCSS, title: 'TailwindCSS' },
+    const icons = [
+        Java,
+        SiGit,
+        SiReact,
+        Vite,
+        SiTailwindcss,
+        SiJavascript,
+        SiTypescript,
+        AWS,
+        SiJira,
     ]
 
     return (
         <>
             <div className='px-10'>
-                <div className='flex h-screen flex-col items-center justify-evenly'>
+                <div className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'>
                     <div>
                         <h1>Hi there, </h1>
                         <h1>I'm Elle Aquilina.</h1>
-                        <br />
                         <p>
                             I code, I tinker, and I'm always working on
                             something new.
                         </p>
                     </div>
-                    <div className='flex w-4/5 items-center justify-center'>
+                    <div className='flex w-4/5 items-center'>
                         <motion.img
                             initial={{ opacity: 0, scale: 0.7 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -52,9 +66,21 @@ function Home() {
                             className='rounded-full'
                         />
                     </div>
-                    <div className='flex flex-row justify-center'>
+                    <div className='flex flex-row'>
                         <span>I work with&nbsp;</span>
                         <WordCarousel words={words} />
+                    </div>
+                    <div>
+                        <Button variant='ghost' size='icon'>
+                            <a href='https://www.linkedin.com/in/elle-aquilina/'>
+                                <LinkedIn />
+                            </a>
+                        </Button>
+                        <Button variant='ghost' size='icon'>
+                            <a href='https://github.com/ElleAquilina'>
+                                <SiGithub />
+                            </a>
+                        </Button>
                     </div>
                     <motion.div
                         animate={{ y: 10 }}
@@ -63,44 +89,49 @@ function Home() {
                             repeatType: 'reverse',
                             duration: 0.5,
                         }}
-                        className='pb-10 md:hidden'
+                        className='md:hidden'
                     >
                         <ChevronDown />
                     </motion.div>
                 </div>
-                <div className='flex h-screen flex-col'>
+                <div className='flex flex-col' id='about'>
                     <h1>About Me</h1>
-                    <p>
-                        I'm a full-stack developer based somewhere amongst the
-                        cornfields of Champaign, IL. I've been interested in
-                        tech since I was a kid- my first website in high school
-                        featured a table tag fueled nightmare, and around then I
-                        learned to solder my own broken devices.
-                    </p>
-                    <p>
-                        Since then, I've worked professionally for a large
-                        fintech company, a Canadian government grants focused
-                        company, and now I'm looking for my next adventure.
-                    </p>
-                    <p>
-                        And my personal projects? Well, I made this website,
-                        host my own personal 'cloud server' that I built myself,
-                        and I'm always working on something new!
-                    </p>
+                    <div className='pb-10 pl-10'>
+                        <p>
+                            I'm a full-stack developer based somewhere amongst
+                            the cornfields of Champaign, IL. I've been
+                            interested in tech since I was a kid; my first
+                            website was a &#60;table&#62; tag fueled nightmare,
+                            and I learned how to solder just to fix my own
+                            devices.
+                        </p>
+                        <p>
+                            Since then, I've worked professionally for a large
+                            fintech company, a Canadian government grants
+                            focused company, and now I'm looking for my next
+                            adventure.
+                        </p>
+                        <p>
+                            And my personal projects? Well, check out below to
+                            learn more about me!
+                        </p>
+                    </div>
                 </div>
                 <div>
                     <h1>Skills</h1>
-                    <div className='flex flex-wrap justify-center gap-2'>
-                        {skills.map((skill) => (
-                            <div className='flex flex-col items-center'>
+                    <div className='flex flex-wrap justify-center gap-3 py-10'>
+                        {icons.map((Icon) => (
+                            <div className='flex w-16 flex-col items-center'>
                                 <motion.div
                                     whileHover={{
                                         scale: 1.5,
                                     }}
                                 >
-                                    <skill.icon className='h-10 w-10' />
+                                    <Icon
+                                        className='h-14 w-14'
+                                        color='default'
+                                    />
                                 </motion.div>
-                                <p>{skill.title}</p>
                             </div>
                         ))}
                     </div>

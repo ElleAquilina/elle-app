@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router'
 import { Menu } from 'lucide-react'
+import { SiGithub } from '@icons-pack/react-simple-icons'
 import ThemeToggle from '@/components/theme-toggle.tsx'
 
 function Header() {
@@ -11,13 +12,16 @@ function Header() {
                 </div>
                 <div className='flex items-center justify-center'>
                     <nav className='hidden space-x-4 md:block'>
-                        <NavLink to='/'>About</NavLink>
+                        <NavLink to='/#about'>About</NavLink>
                         <NavLink to='/'>Experience</NavLink>
                         <NavLink to='/'>Projects</NavLink>
                         <NavLink to='/'>Hobbies</NavLink>
                     </nav>
                 </div>
                 <div className='flex flex-row items-center justify-center gap-2'>
+                    <div className='hidden md:block'>
+                        <SiGithub />
+                    </div>
                     <ThemeToggle />
                     <div className='md:hidden'>
                         <Menu />
