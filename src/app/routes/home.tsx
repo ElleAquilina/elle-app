@@ -95,7 +95,7 @@ function Home() {
                             repeatType: 'reverse',
                             duration: 0.5,
                         }}
-                        className='md:hidden'
+                        className='z-0 md:hidden'
                     >
                         <ChevronDown />
                     </motion.div>
