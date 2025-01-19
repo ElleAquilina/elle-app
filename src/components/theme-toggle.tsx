@@ -11,12 +11,10 @@ function ThemeToggle() {
     useEffect(() => {
         const storedTheme = localStorage.getItem('theme')
         setTheme(storedTheme ? storedTheme : 'dark')
-        console.log(storedTheme)
     }, [])
 
     useEffect(() => {
         document.body.className = theme
-        //localStorage.setItem('theme', theme)
     }, [theme])
 
     function toggleTheme() {
