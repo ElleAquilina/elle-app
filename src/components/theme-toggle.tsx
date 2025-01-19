@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/button.tsx'
 import Moon from '@/components/icons/moon'
 import Sun from '@/components/icons/sun'
 

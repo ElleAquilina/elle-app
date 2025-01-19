@@ -15,7 +15,7 @@ import Java from '@/components/icons/java'
 import Vite from '@/components/icons/vite'
 import AWS from '@/components/icons/aws'
 import LinkedIn from '@/components/icons/linkedin'
-import { Button } from '@/components/ui/button.tsx'
+import { Button } from '@/components/button.tsx'
 
 function Home() {
     const words = [
@@ -27,8 +27,8 @@ function Home() {
         'cloud\u00A0services.',
         'networking.',
         'self\u00A0hosting.',
-        'new\u00A0tech.',
-        'legacy\u00A0tech.',
+        'new\u00A0technologies.',
+        'legacy\u00A0technologies.',
         'photography.',
     ]
 
@@ -47,7 +47,10 @@ function Home() {
     return (
         <>
             <div className='px-10'>
-                <div className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'>
+                <div
+                    className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'
+                    id='home'
+                >
                     <div>
                         <h1>Hi there, </h1>
                         <h1>I'm Elle Aquilina.</h1>
@@ -77,7 +80,10 @@ function Home() {
                             </a>
                         </Button>
                         <Button variant='ghost' size='icon'>
-                            <a href='https://github.com/ElleAquilina'>
+                            <a
+                                href='https://github.com/ElleAquilina'
+                                target='_blank'
+                            >
                                 <SiGithub />
                             </a>
                         </Button>
@@ -117,7 +123,7 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <div>
+                <div id='experience'>
                     <h1>Skills</h1>
                     <div className='flex flex-wrap justify-center gap-3 py-10'>
                         {icons.map((Icon) => (
@@ -159,16 +165,12 @@ function Home() {
                         features within the 'confines' of our old tech and
                         integrating into Microsoft Dynamics CRM.
                     </p>
-                    <h2>Personal</h2>
-                    <p>This Website! (aquilina.cloud)</p>
-                    <p>
-                        I wrote this website in Node, React, Vite, and
-                        Typescript. I also used this to play around with some
-                        animations using framer-motion. This website was then
-                        deployed on my home server (check it out in my other
-                        projects!) and secured behind Cloudflare, an Oracle VPN
-                        tunnel, and a reverse proxy.
-                    </p>
+                </div>
+                <div id='projects'>
+                    <h1>Personal Projects</h1>
+                </div>
+                <div id='hobbies'>
+                    <h1>Hobbies</h1>
                 </div>
             </div>
         </>
