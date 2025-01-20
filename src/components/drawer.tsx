@@ -35,34 +35,34 @@ function Drawer() {
                         onClick={(e) => e.stopPropagation()}
                         className='absolute inset-x-0 flex h-[100vh] w-[70vw] flex-col overflow-hidden rounded-r-3xl bg-drawer'
                     >
-                        <div className='sticky top-0 flex w-full justify-center pt-6'>
+                        <div className='sticky top-0 flex w-full justify-end p-6'>
                             <button onClick={toggleDrawer}>
                                 <X />
                             </button>
                         </div>
-                        <ul className='flex flex-col justify-evenly space-y-10 p-10'>
-                            <li className='flex flex-row items-center'>
-                                <House className='mr-5' />
+                        <ul className='flex flex-col justify-center space-y-6 px-6'>
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <House className='mr-5 inline' />
                                 Home
                             </li>
-                            <li className='flex flex-row items-center'>
-                                <CircleUserRound className='mr-5' />
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <CircleUserRound className='mr-5 inline' />
                                 About
                             </li>
-                            <li className='flex flex-row items-center'>
-                                <Album className='mr-5' />
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <Album className='mr-5 inline' />
                                 Experience
                             </li>
-                            <li className='flex flex-row items-center'>
-                                <Table2 className='mr-5' />
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <Table2 className='mr-5 inline' />
                                 Projects
                             </li>
-                            <li className='flex flex-row items-center'>
-                                <Telescope className='mr-5' />
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <Telescope className='mr-5 inline' />
                                 Hobbies
                             </li>
-                            <li className='flex flex-row items-center'>
-                                <MessageCircleQuestion className='mr-5' />
+                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                                <MessageCircleQuestion className='mr-5 inline' />
                                 Contact
                             </li>
                         </ul>
