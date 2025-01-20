@@ -47,10 +47,7 @@ function Home() {
     return (
         <>
             <div className='px-10'>
-                <div
-                    className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'
-                    id='home'
-                >
+                <div className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'>
                     <div>
                         <h1>Hi there, </h1>
                         <h1>I'm Elle Aquilina.</h1>

@@ -43,27 +43,39 @@ function Drawer() {
                         <ul className='flex flex-col justify-center space-y-6 px-6'>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <House className='mr-5 inline' />
-                                Home
+                                <a href='#' onClick={toggleDrawer}>
+                                    Home
+                                </a>
                             </li>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <CircleUserRound className='mr-5 inline' />
-                                About
+                                <a href='#about' onClick={toggleDrawer}>
+                                    About
+                                </a>
                             </li>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <Album className='mr-5 inline' />
-                                Experience
+                                <a href='#experience' onClick={toggleDrawer}>
+                                    Experience
+                                </a>
                             </li>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <Table2 className='mr-5 inline' />
-                                Projects
+                                <a href='#projects' onClick={toggleDrawer}>
+                                    Projects
+                                </a>
                             </li>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <Telescope className='mr-5 inline' />
-                                Hobbies
+                                <a href='#hobbies' onClick={toggleDrawer}>
+                                    Hobbies
+                                </a>
                             </li>
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <MessageCircleQuestion className='mr-5 inline' />
-                                Contact
+                                <a href='#contact' onClick={toggleDrawer}>
+                                    Contact
+                                </a>
                             </li>
                         </ul>
                     </motion.div>
