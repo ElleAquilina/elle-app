@@ -49,6 +49,8 @@
 
 .light {
     --background: 235, 235, 235;
+    --drawer: 200, 200, 200;
+    --drawer-handle: 100, 100, 100;
     --border: 0, 0, 0;
     --text-primary: 0, 0, 0;
     --text-secondary: 15, 25, 40;
@@ -59,7 +61,9 @@
 
 .dark {
     --background: 30, 30, 35;
-    --border: 0, 0, 0;
+    --drawer: 23, 23, 23;
+    --drawer-handle: 75, 75, 75;
+    --border: 255, 255, 255;
     --text-primary: 255, 255, 255;
     --text-secondary: 205, 213, 225;
 

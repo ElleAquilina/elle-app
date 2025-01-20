@@ -12,6 +12,8 @@ module.exports = {
         extend: {
             colors: {
                 background: 'rgba(var(--background))',
+                drawer: 'rgba(var(--drawer))',
+                drawerhandle: 'rgba(var(--drawer-handle))',
                 border: 'rgba(var(--border))',
             },
             fontFamily: {
