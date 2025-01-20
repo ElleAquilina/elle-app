@@ -47,7 +47,7 @@ function Home() {
     return (
         <>
             <div className='px-10'>
-                <div className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly'>
+                <div className='flex h-[calc(100vh-53px)] flex-col items-center justify-evenly md:flex-row'>
                     <div>
                         <h1>Hi there, </h1>
                         <h1>I'm Elle Aquilina.</h1>
@@ -55,8 +55,11 @@ function Home() {
                             I code, I tinker, and I'm always working on
                             something new.
                         </p>
+                        <div className='hidden md:flex'>
+                            <WordCarousel words={words} />
+                        </div>
                     </div>
-                    <div className='flex w-4/5 items-center'>
+                    <div className='flex w-4/5 items-center md:w-1/2 md:max-w-xl'>
                         <motion.img
                             initial={{ opacity: 0, scale: 0.7 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -65,12 +68,9 @@ function Home() {
                             alt='Profile picture'
                             className='rounded-full'
                         />
-                    </div>
-                    <div className='flex flex-row'>
-                        <span>I work with&nbsp;</span>
                         <WordCarousel words={words} />
                     </div>
-                    <div>
+                    <div className='md:hidden'>
                         <Button variant='ghost' size='icon'>
                             <a href='https://www.linkedin.com/in/elle-aquilina/'>
                                 <LinkedIn />
@@ -97,7 +97,7 @@ function Home() {
                         <ChevronDown />
                     </motion.div>
                 </div>
-                <div className='flex flex-col' id='about'>
+                <div className='flex flex-col pt-14' id='about'>
                     <h1>About Me</h1>
                     <div className='pb-10 pl-10'>
                         <p>
@@ -120,8 +120,14 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <div id='experience'>
-                    <h1>Skills</h1>
+                <div id='experience'></div>
+                <div>
+                    <h1>Experience</h1>
+                    <h2>Skills</h2>
+                    <p>
+                        I've gathered these over my professional career and
+                        personal projects. Click to learn more!
+                    </p>
                     <div className='flex flex-wrap justify-center gap-3 py-10'>
                         {icons.map((Icon) => (
                             <div className='flex w-16 flex-col items-center'>
@@ -138,20 +144,17 @@ function Home() {
                             </div>
                         ))}
                     </div>
-                </div>
-                <div>
-                    <h1>Experience</h1>
                     <h2>Professional</h2>
                     <p>APEX Fintech Solutions</p>
                     <p>
-                        A company providing tax software for large brokerages
-                        and firms- I worked here for over four years. Unlike
-                        most full-stack positions where you might fall into a
-                        dedicated roll, I got to work on everything from cloud
-                        AWS infrastructure, back-end performance improvements,
-                        personally rewriting our API for performance and
-                        security improvements, and upgrading and improving our
-                        AngularJS front-end.
+                        I worked here as a full stack developer for just over
+                        four years, creating tax software for large brokerages
+                        and firms. Unlike most full-stack positions where you
+                        might fall into a dedicated roll, I got to work on
+                        everything from cloud AWS infrastructure, back-end
+                        performance improvements, personally rewriting our API
+                        for performance and security improvements, and upgrading
+                        and improving our AngularJS front-end.
                     </p>
                     <p>Eperformance Inc</p>
                     <p>
@@ -165,9 +168,16 @@ function Home() {
                 </div>
                 <div id='projects'>
                     <h1>Personal Projects</h1>
+                    <h2>Networking & Home Server</h2>
+                    <p>
+                        Shortly after moving into our home, I realised our
+                        basement wifi was lacking. It snowballed from there; I
+                        ran more CAT5 than I will ever need.
+                    </p>
                 </div>
                 <div id='hobbies'>
                     <h1>Hobbies</h1>
+                    <h2>Photography</h2>
                 </div>
             </div>
         </>
