@@ -6,7 +6,7 @@ function App() {
     return (
         <>
             <BrowserRouter>
-                <div className='h-screen'>
+                <div>
                     <Header />
                     <Routes>
                         <Route path='/' element={<Home />} />

@@ -25,6 +25,10 @@
         src: url('src/assets/fonts/mukta-semibold.ttf') format('truetype');
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         font: medium karla, 'ui-sans-serif', 'sans-serif';
     }
