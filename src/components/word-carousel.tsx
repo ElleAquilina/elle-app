@@ -25,7 +25,7 @@ function WordCarousel({ words }: { words: string[] }) {
                                 delay: (0.5 + index) * 0.1,
                                 type: 'tween',
                             }}
-                            className='z-0 font-bold text-blue-500'
+                            className='-z-10 font-bold text-blue-500'
                         >
                             {char}
                         </motion.span>
