@@ -16,6 +16,7 @@ import Vite from '@/components/icons/vite'
 import AWS from '@/components/icons/aws'
 import LinkedIn from '@/components/icons/linkedin'
 import { Button } from '@/components/button.tsx'
+import IconCard from '@/components/icon-card.tsx'
 
 function Home() {
     const words = [
@@ -32,16 +33,9 @@ function Home() {
         'photography.',
     ]
 
-    const icons = [
-        Java,
-        SiGit,
-        SiReact,
-        Vite,
-        SiTailwindcss,
-        SiJavascript,
-        SiTypescript,
-        AWS,
-        SiJira,
+    const languageCards = [
+        { icon: Java, name: 'Java' },
+        { icon: SiJavascript, name: 'Javascript' },
     ]
 
     return (
@@ -120,30 +114,16 @@ function Home() {
                         </p>
                     </div>
                 </div>
-                <div id='experience'></div>
-                <div>
+                <div id='skills'>
+                    <h1>My Skills</h1>
+                    <IconCard cards={languageCards} />
+                </div>
+                <div className='h-dvh' id='experience'>
                     <h1>Experience</h1>
-                    <h2>Skills</h2>
                     <p>
                         I've gathered these over my professional career and
                         personal projects. Click to learn more!
                     </p>
-                    <div className='flex flex-wrap justify-center gap-3 py-10'>
-                        {icons.map((Icon) => (
-                            <div className='flex w-16 flex-col items-center'>
-                                <motion.div
-                                    whileHover={{
-                                        scale: 1.5,
-                                    }}
-                                >
-                                    <Icon
-                                        className='h-14 w-14'
-                                        color='default'
-                                    />
-                                </motion.div>
-                            </div>
-                        ))}
-                    </div>
                     <h2>Professional</h2>
                     <p>APEX Fintech Solutions</p>
                     <p>
