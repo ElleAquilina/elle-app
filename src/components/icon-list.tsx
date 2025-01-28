@@ -6,7 +6,7 @@ type Card = {
     name: string
 }
 
-function IconCard({ cards }: { cards: Card[] }) {
+function IconList({ cards }: { cards: Card[] }) {
     const [hovered, setHovered] = useState<number | null>(null)
 
     return (
@@ -17,10 +17,10 @@ function IconCard({ cards }: { cards: Card[] }) {
                         onMouseEnter={() => setHovered(index)}
                         onMouseLeave={() => setHovered(null)}
                         className={cn(
-                            'flex h-32 w-32 flex-col items-center justify-evenly rounded-xl bg-gray-800 transition-all duration-300 ease-out',
+                            'border-highlight flex h-32 w-32 flex-col items-center justify-evenly rounded-xl border-2 bg-gray-800 transition-all duration-300 ease-out',
                             hovered != null &&
                                 hovered != index &&
-                                'scale-[0.90] blur-sm grayscale',
+                                'border-secondary scale-[0.90] blur-sm grayscale',
                         )}
                     >
                         <card.icon color='default' className='h-10 w-10' />
@@ -32,4 +32,4 @@ function IconCard({ cards }: { cards: Card[] }) {
     )
 }
 
-export default IconCard
+export default IconList
