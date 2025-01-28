@@ -1,4 +1,5 @@
 import { SiGithub } from '@icons-pack/react-simple-icons'
+import LinkedIn from '@/assets/icons/linkedin'
 import ThemeToggle from '@/components/theme-toggle'
 import Drawer from '@/components/drawer'
 
