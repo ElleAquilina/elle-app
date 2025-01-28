@@ -26,14 +26,14 @@ function Drawer() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onClick={toggleDrawer}
-                    className='fixed inset-0 z-50 h-[100vh] bg-white/60 backdrop-blur-lg'
+                    className='fixed inset-0 z-50 h-[100vh] bg-background/60 backdrop-blur-lg'
                 >
                     <motion.div
                         initial={{ x: '-100%' }}
                         animate={{ x: '0%' }}
                         transition={{ ease: 'easeInOut' }}
                         onClick={(e) => e.stopPropagation()}
-                        className='absolute inset-x-0 flex h-[100vh] w-[70vw] flex-col overflow-hidden rounded-r-3xl bg-drawer'
+                        className='border-drawerBorder absolute inset-x-0 flex h-[100vh] w-[70vw] flex-col overflow-hidden rounded-r-3xl border-r-2 bg-drawer'
                     >
                         <div className='sticky top-0 flex w-full justify-end p-6'>
                             <button onClick={toggleDrawer}>

@@ -1,13 +1,18 @@
 import { useState } from 'react'
 import { cn } from '@/utils/cn.ts'
+import Java from '@/assets/icons/java'
+import AWS from '@/assets/icons/aws'
+import { SiJavascript, SiTypescript } from '@icons-pack/react-simple-icons'
 
-type Card = {
-    icon: React.FC<React.SVGProps<SVGSVGElement>>
-    name: string
-}
-
-function IconList({ cards }: { cards: Card[] }) {
+function IconList() {
     const [hovered, setHovered] = useState<number | null>(null)
+
+    const cards = [
+        { icon: Java, name: 'Java' },
+        { icon: SiJavascript, name: 'Javascript' },
+        { icon: SiTypescript, name: 'Typescript' },
+        { icon: AWS, name: 'AWS' },
+    ]
 
     return (
         <>
@@ -17,7 +22,7 @@ function IconList({ cards }: { cards: Card[] }) {
                         onMouseEnter={() => setHovered(index)}
                         onMouseLeave={() => setHovered(null)}
                         className={cn(
-                            'border-highlight flex h-32 w-32 flex-col items-center justify-evenly rounded-xl border-2 bg-gray-800 transition-all duration-300 ease-out',
+                            'border-highlight flex h-24 w-24 flex-col items-center justify-evenly rounded-xl border-2 transition-all duration-300 ease-out sm:h-32 sm:w-32',
                             hovered != null &&
                                 hovered != index &&
                                 'border-secondary scale-[0.90] blur-sm grayscale',
