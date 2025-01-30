@@ -1,0 +1,31 @@
+@theme inline {
+    --font-sans: 'karla', ui-sans-serif, system-ui, sans-serif;
+    --font-mukta: 'mukta', ui-sans-serif, system-ui, sans-serif;
+    --font-mukta-bold: 'mukta-bold', ui-sans-serif, system-ui, sans-serif;
+
+    --color-white-100: oklch(97.41% 0.0074 80.72);
+    --color-white-200: oklch(94.78% 0.016 82.79);
+    --color-white-300: oklch(92.17% 0.0235 82.12);
+
+    --color-black-600: oklch(32.72% 0.0082 196.76);
+    --color-black-700: oklch(28.51% 0.0057 196.84);
+    --color-black-800: oklch(24.04% 0.0045 196.86);
+    --color-black-900: oklch(19.35% 0.0032 196.9);
+
+    --color-steel: oklch(31.54% 0.0297 260.53);
+    --color-steel-100: oklch(33.45% 0.0374 259.44);
+
+    --color-navy: oklch(42.43% 0.0629 253.35);
+    --color-plum: oklch(49.63% 0.0568 311.76);
+    --color-rose: oklch(60.23% 0.1041 7.06);
+    --color-coral: oklch(67.51% 0.152 20.02);
+    --color-beige: oklch(79.46% 0.0859 49.09);
+
+    --color-background: var(--theme-background);
+    --color-surface: var(--theme-surface);
+    --color-primary: var(--theme-primary);
+    --color-secondary: var(--theme-secondary);
+    --color-tertiary: var(--theme-tertiary);
+    --color-accent: var(--theme-accent);
+    --color-on-primary: var(--theme-on-primary);
+}

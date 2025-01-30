@@ -1,76 +1,90 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import '@/styles/theme.css';
+
+@font-face {
+    font-family: 'karla';
+    font-display: swap;
+    src: url('src/assets/fonts/karla.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'mukta';
+    font-display: swap;
+    src: url('../assets/fonts/mukta-light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'mukta-bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('src/assets/fonts/mukta-semibold.ttf') format('truetype');
+}
 
 @layer base {
-    @font-face {
-        font-family: 'Karla';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('src/assets/fonts/karla.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'Mukta';
-        font-style: normal;
-        font-weight: 300;
-        font-display: swap;
-        src: url('../assets/fonts/mukta-light.ttf') format('truetype');
-    }
-    @font-face {
-        font-family: 'MuktaBold';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url('src/assets/fonts/mukta-semibold.ttf') format('truetype');
-    }
-
     html {
         scroll-behavior: smooth;
     }
 
-    body {
-        font: medium karla, 'ui-sans-serif', 'sans-serif';
-    }
-
     h1 {
-        font: xx-large muktabold, 'ui-sans-serif', 'sans-serif';
+        font: var(--text-8xl) mukta-bold, 'ui-sans-serif', 'sans-serif';
+        letter-spacing: -0.03em;
     }
 
     h2 {
-        font: x-large mukta, 'ui-sans-serif', 'sans-serif';
+        font: var(--text-6xl) mukta-bold, 'ui-sans-serif', 'sans-serif';
     }
 
     h3 {
-        font: large mukta, 'ui-sans-serif', 'sans-serif';
+        font: var(--text-4xl) mukta-bold, 'ui-sans-serif', 'sans-serif';
+        line-height: 1.4;
+        padding: 1rem 0 1rem 0;
+    }
+
+    h4 {
+        font: var(--text-2xl) mukta-bold, 'ui-sans-serif', 'sans-serif';
+    }
+
+    h5 {
+        font: var(--text-xl) mukta-bold, 'ui-sans-serif', 'sans-serif';
+    }
+
+    h6 {
+        font: var(--text-lg) mukta, 'ui-sans-serif', 'sans-serif';
     }
 
     p {
         line-height: 1.6;
-        margin-block: 1em 1em;
+    }
+
+    .light {
+        background: var(--color-white-100);
+        color: var(--color-black-900);
+
+        --theme-background-primary: var(--color-white-100);
+        --theme-background-secondary: var(--color-white-200);
+    }
+
+    .dark {
+        background: var(--color-steel);
+        color: var(--color-white-100);
+
+        /* Backgrounds */
+        --theme-background: var(--color-steel);
+
+        /* Surfaces (Cards, etc.) */
+        --theme-surface: var(--color-steel-100);
+
+        /* Primary/Secondaries/Accents */
+        --theme-primary: var(--color-coral);
+        --theme-secondary: var(--color-rose);
+        --theme-tertiary: var(--color-plum);
+        --theme-accent: var(--color-beige);
+
+        /* On-Bg/Prim/etc. (Texts, etc.) */
+        --theme-on-background: var(--color-white-100);
+        --theme-on-surface: var(--color-white-100);
+        --theme-on-primary: var(--color-steel);
+        --theme-on-secondary: var(--color-white-100);
+
     }
 }
 
-.light {
-    --background: 235, 235, 235;
-    --drawer: 200, 200, 200;
-    --drawer-handle: 100, 100, 100;
-    --border: 0, 0, 0;
-    --text-primary: 0, 0, 0;
-    --text-secondary: 15, 25, 40;
-
-    background: rgba(var(--background));
-    color: rgba(var(--text-primary));
-}
-
-.dark {
-    --background: 30, 30, 35;
-    --drawer: 23, 23, 23;
-    --drawer-handle: 75, 75, 75;
-    --border: 255, 255, 255;
-    --text-primary: 255, 255, 255;
-    --text-secondary: 205, 213, 225;
-
-    background: rgba(var(--background));
-    color: rgba(var(--text-primary));
-}
