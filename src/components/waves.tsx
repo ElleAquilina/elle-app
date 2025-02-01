@@ -1,47 +1,65 @@
 import { motion } from 'framer-motion'
-import Wave from '@/assets/images/wave.svg'
-import Wave2 from '@/assets/images/wave2.svg'
-import Wave3 from '@/assets/images/wave3.svg'
 
 function Waves() {
     return (
         <>
-            <motion.img
-                initial={{ x: -50 }}
-                animate={{ x: 50 }}
-                transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                }}
-                src={Wave}
-                alt=''
+            <motion.svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1440 320'
                 className='absolute origin-top scale-x-150 scale-y-50'
-            />
-            <motion.img
-                initial={{ x: 50 }}
-                animate={{ x: -50 }}
-                transition={{
-                    duration: 10,
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                }}
-                src={Wave2}
-                alt=''
+            >
+                <motion.path
+                    d='M0,0L21.8,5.3C43.6,11,87,21,131,64C174.5,107,218,181,262,181.3C305.5,181,349,107,393,112C436.4,117,480,203,524,202.7C567.3,203,611,117,655,69.3C698.2,21,742,11,785,32C829.1,53,873,107,916,160C960,213,1004,267,1047,256C1090.9,245,1135,171,1178,160C1221.8,149,1265,203,1309,202.7C1352.7,203,1396,149,1418,122.7L1440,96L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z'
+                    fill='currentColor'
+                    fillOpacity='1'
+                    initial={{ x: -50 }}
+                    animate={{ x: 50 }}
+                    transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                    }}
+                    className='fill-surface'
+                />
+            </motion.svg>
+            <motion.svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1440 320'
                 className='absolute scale-x-150'
-            />
-            <motion.img
-                initial={{ x: 50 }}
-                animate={{ x: -50 }}
-                transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                }}
-                src={Wave3}
-                alt=''
+            >
+                <motion.path
+                    d='M0,288L21.8,288C43.6,288,87,288,131,282.7C174.5,277,218,267,262,245.3C305.5,224,349,192,393,165.3C436.4,139,480,117,524,101.3C567.3,85,611,75,655,96C698.2,117,742,171,785,170.7C829.1,171,873,117,916,85.3C960,53,1004,43,1047,69.3C1090.9,96,1135,160,1178,170.7C1221.8,181,1265,139,1309,117.3C1352.7,96,1396,96,1418,96L1440,96L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z'
+                    fill='currentColor'
+                    fillOpacity='0.5'
+                    initial={{ x: 50 }}
+                    animate={{ x: -50 }}
+                    transition={{
+                        duration: 10,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                    }}
+                    className='fill-surface'
+                />
+            </motion.svg>
+            <motion.svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 1440 320'
                 className='absolute scale-x-150 scale-y-150'
-            />
+            >
+                <motion.path
+                    d='M0,128L21.8,149.3C43.6,171,87,213,131,197.3C174.5,181,218,107,262,80C305.5,53,349,75,393,74.7C436.4,75,480,53,524,37.3C567.3,21,611,11,655,48C698.2,85,742,171,785,213.3C829.1,256,873,256,916,224C960,192,1004,128,1047,133.3C1090.9,139,1135,213,1178,245.3C1221.8,277,1265,267,1309,224C1352.7,181,1396,107,1418,69.3L1440,32L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z'
+                    fill='currentColor'
+                    fill-opacity='0.25'
+                    initial={{ x: 50 }}
+                    animate={{ x: -50 }}
+                    transition={{
+                        duration: 5,
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                    }}
+                    className='fill-surface'
+                />
+            </motion.svg>
         </>
     )
 }
