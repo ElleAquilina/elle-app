@@ -6,11 +6,11 @@ import Drawer from '@/components/drawer'
 function Header() {
     return (
         <>
-            <header className='top-4 z-10 flex w-full justify-between p-2'>
+            <header className='bg-surface sticky top-0 z-30 flex w-full justify-between p-2'>
                 <div className='md:hidden'>
                     <Drawer />
                 </div>
-                <div className='flex items-center justify-center pl-2'>
+                <div className='text-on-surface flex items-center justify-center pl-2'>
                     <h4>AQUILINA</h4>
                 </div>
                 <div className='flex flex-row items-center justify-center gap-2'>

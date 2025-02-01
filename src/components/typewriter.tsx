@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ReactTyped } from 'react-typed'
 
-function Typewriter() {
+function Typewriter({ useColors }: { useColors: boolean }) {
     const typewriterText = [
         'full-stack development',
         'back-end development',
@@ -14,13 +14,9 @@ function Typewriter() {
         'self-teaching',
     ]
 
-    const typewriterColors = [
-        'text-textPrimary',
-        'text-textSecondary',
-        'text-textAccent',
-    ]
+    const typewriterColors = ['text-primary', 'text-secondary', 'text-accent']
 
-    const [typewriterColor, setTypewriterColor] = useState(typewriterColors[0])
+    const [typewriterColor, setTypewriterColor] = useState('text-on-background')
 
     function updateTypewriterColor() {
         setTypewriterColor((prevColor) => {
@@ -39,7 +35,7 @@ function Typewriter() {
                 showCursor={true}
                 className={typewriterColor}
                 preStringTyped={() => {
-                    updateTypewriterColor()
+                    useColors ? updateTypewriterColor() : null
                 }}
             />
         </>

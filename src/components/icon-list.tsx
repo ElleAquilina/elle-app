@@ -22,10 +22,10 @@ function IconList() {
                         onMouseEnter={() => setHovered(index)}
                         onMouseLeave={() => setHovered(null)}
                         className={cn(
-                            'border-highlight flex h-24 w-24 flex-col items-center justify-evenly rounded-xl border-2 transition-all duration-300 ease-out sm:h-32 sm:w-32',
+                            'flex h-24 w-24 flex-col items-center justify-evenly rounded-xl border-2 transition-all duration-300 ease-out sm:h-32 sm:w-32',
                             hovered != null &&
                                 hovered != index &&
-                                'border-secondary scale-[0.90] blur-sm grayscale',
+                                'scale-[0.90] blur-sm grayscale',
                         )}
                     >
                         <card.icon color='default' className='h-10 w-10' />

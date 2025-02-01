@@ -59,31 +59,38 @@
         background: var(--color-white-100);
         color: var(--color-black-900);
 
-        --theme-background-primary: var(--color-white-100);
-        --theme-background-secondary: var(--color-white-200);
+        /* Backgrounds */
+        --theme-background: var(--color-white-100);
+
+        /* Surfaces (Cards, etc.) */
+        --theme-surface: var(--color-navy-100);
+
+        /* Primary/Secondaries/Accents */
+        --theme-primary: var(--color-navy-200);
+
+        /* On-Bg/Prim/etc. (Texts, etc.) */
+        --theme-on-background: var(--color-black-900);
+        --theme-on-surface: var(--color-steel-100);
+        --theme-on-primary: var(--color-white-100);
     }
 
     .dark {
-        background: var(--color-steel);
+        background: var(--color-steel-100);
         color: var(--color-white-100);
 
         /* Backgrounds */
-        --theme-background: var(--color-steel);
+        --theme-background: var(--color-steel-100);
 
         /* Surfaces (Cards, etc.) */
-        --theme-surface: var(--color-steel-100);
+        --theme-surface: var(--color-navy-200);
 
         /* Primary/Secondaries/Accents */
-        --theme-primary: var(--color-coral);
-        --theme-secondary: var(--color-rose);
-        --theme-tertiary: var(--color-plum);
-        --theme-accent: var(--color-beige);
+        --theme-primary: var(--color-orange-100);
 
         /* On-Bg/Prim/etc. (Texts, etc.) */
         --theme-on-background: var(--color-white-100);
         --theme-on-surface: var(--color-white-100);
-        --theme-on-primary: var(--color-steel);
-        --theme-on-secondary: var(--color-white-100);
+        --theme-on-primary: var(--color-steel-100);
 
     }
 }

@@ -44,7 +44,10 @@ function Home() {
                             <br />
                             <Typewriter />
                         </h6>
-                        <Button className='mt-6 w-30' asChild>
+                        <Button
+                            className='text-on-primary mt-6 hidden w-30 sm:flex'
+                            asChild
+                        >
                             <a href='#contact'>
                                 <Send /> Contact Me
                             </a>
@@ -71,23 +74,10 @@ function Home() {
             </div>
             <div
                 id='about'
-                className='bg-backgroundSecondary flex flex-col space-x-[10%] p-[10%] sm:flex-row'
+                className='bg-surface/50 flex flex-col space-x-[10%] p-[10%] md:flex-row'
             >
-                <div className='sm:w-1/2'>
-                    <h3>&#62; ABOUT ME</h3>
-                    <h2>I've been a full stack developer since 2018</h2>
-                    <p>
-                        I've been interested in tech since I was a kid; I built
-                        my first website in the early 2000s was a
-                        &#60;table&#62; tag fueled nightmare, and I was always
-                        prying things open to see how they worked.
-                    </p>
-                    <p>
-                        Since then, I've worked professionally for a large
-                        fintech company, a Canadian government grants focused
-                        company, and now I'm looking for my next adventure.
-                    </p>
-                    <p>More about my skills --</p>
+                <div className='md:w-1/2'>
+                    <h4 className='text-primary'>&#62; ABOUT ME</h4>
                 </div>
                 <div>
                     <div className='flex flex-row items-baseline'>
@@ -98,16 +88,15 @@ function Home() {
                     <p>Lorem ipsum etc</p>
                 </div>
             </div>
-            <div id='experience' className='bg-backgroundPrimary'>
-                <div className='p-[10%]'>
-                    <h2>Experiences</h2>
-                </div>
+            <div
+                id='experience'
+                className='bg-background flex flex-col space-x-[10%] p-[10%] md:flex-row'
+            >
+                <h4 className='text-primary'>&#62; EXPERIENCE</h4>
+                <Timeline data={timelineData} />
 
-                <div
-                    id='skills'
-                    className='bg-backgroundSecondary mx-[5%] rounded-xl border-2 border-border p-10'
-                >
-                    <h3>&#62; Skills</h3>
+                <div id='skills'>
+                    <h4 className='text-primary'>&#62; SKILLS</h4>
                     <IconList />
                 </div>
             </div>
