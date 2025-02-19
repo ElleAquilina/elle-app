@@ -6,7 +6,7 @@ import Drawer from '@/components/drawer'
 function Header() {
     return (
         <>
-            <header className='bg-surface sticky top-0 z-30 flex w-full justify-between p-2'>
+            <header className='bg-surface top-0 z-30 flex w-full justify-between p-2'>
                 <div className='md:hidden'>
                     <Drawer />
                 </div>
