@@ -195,6 +195,24 @@ function Home() {
                 <Timeline data={timelineData} />
             </div>
             <div
+                id='projects'
+                className='bg-surface/50 flex flex-col space-x-[10%] p-[10%] md:flex-row xl:px-[15%]'
+            >
+                <div className='m-0 min-w-1/4 p-0'>
+                    <h4 className='text-primary whitespace-nowrap'>
+                        &#62; PROJECTS
+                    </h4>
+                    <p>
+                        This website is made with Vite, React, and TailwindCSS.
+                        It uses CI/CD through Github, Github Actions, and
+                        Runners. I run a Ubuntu LXC that hosts my runner, and
+                        deploys it to a Caddy server. My Caddy server also is
+                        used as a reverse proxy, and through Cloudflare I'm able
+                        to server this to the world!
+                    </p>
+                </div>
+            </div>
+            <div
                 id='hobbies'
                 className='bg-surface/50 flex flex-col space-x-[10%] p-[10%] md:flex-row xl:px-[20%]'
             >
