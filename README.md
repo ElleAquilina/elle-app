@@ -26,13 +26,13 @@ and some of my hobbies unrelated to my professional work.
 * **Prettier** - Formatter util
 * **Framer Motion** Animation framework
 * **Lucide React** Icons
+* **Simple Icons** Brand icons
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Sourced Components
 
 * **Button** [Shadcn][shadcn-button-url]
-* **Parralax Scroll** [Aceternity][aceternity-parallax-url]
-* **Theme Toggle** ???
+* **Typewriter** https://github.com/ssbeefeater/react-typed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
