@@ -5,7 +5,6 @@ import {
     Menu,
     House,
     Album,
-    Table2,
     MessageCircleQuestion,
     Telescope,
     CircleUserRound,
@@ -26,14 +25,14 @@ function Drawer() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     onClick={toggleDrawer}
-                    className='fixed inset-0 z-50 h-[100vh] bg-background/60 backdrop-blur-lg'
+                    className='bg-background/60 fixed inset-0 z-50 h-[100vh] backdrop-blur-lg'
                 >
                     <motion.div
                         initial={{ x: '-100%' }}
                         animate={{ x: '0%' }}
                         transition={{ ease: 'easeInOut' }}
                         onClick={(e) => e.stopPropagation()}
-                        className='border-drawerBorder absolute inset-x-0 flex h-[100vh] w-[70vw] flex-col overflow-hidden rounded-r-3xl border-r-2 bg-drawer'
+                        className='border-drawerBorder bg-drawer absolute inset-x-0 flex h-[100vh] w-[70vw] flex-col overflow-hidden rounded-r-3xl border-r-2'
                     >
                         <div className='sticky top-0 flex w-full justify-end p-6'>
                             <button onClick={toggleDrawer}>
@@ -41,37 +40,39 @@ function Drawer() {
                             </button>
                         </div>
                         <ul className='flex flex-col justify-center space-y-6 px-6'>
-                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                            <li className='via-background from-transparent py-2 hover:bg-gradient-to-l'>
                                 <House className='mr-5 inline' />
                                 <a href='#' onClick={toggleDrawer}>
                                     Home
                                 </a>
                             </li>
-                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                            <li className='via-background from-transparent py-2 hover:bg-gradient-to-l'>
                                 <CircleUserRound className='mr-5 inline' />
                                 <a href='#about' onClick={toggleDrawer}>
                                     About
                                 </a>
                             </li>
-                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                            <li className='via-background from-transparent py-2 hover:bg-gradient-to-l'>
                                 <Album className='mr-5 inline' />
                                 <a href='#experience' onClick={toggleDrawer}>
                                     Experience
                                 </a>
                             </li>
+                            {/*
                             <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
                                 <Table2 className='mr-5 inline' />
                                 <a href='#projects' onClick={toggleDrawer}>
                                     Projects
                                 </a>
                             </li>
-                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                            */}
+                            <li className='via-background from-transparent py-2 hover:bg-gradient-to-l'>
                                 <Telescope className='mr-5 inline' />
                                 <a href='#hobbies' onClick={toggleDrawer}>
                                     Hobbies
                                 </a>
                             </li>
-                            <li className='from-transparent via-background py-2 hover:bg-gradient-to-l'>
+                            <li className='via-background from-transparent py-2 hover:bg-gradient-to-l'>
                                 <MessageCircleQuestion className='mr-5 inline' />
                                 <a href='#contact' onClick={toggleDrawer}>
                                     Contact

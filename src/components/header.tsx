@@ -18,11 +18,21 @@ function Header() {
                         <a href='#'>Home</a>
                         <a href='#about'>About</a>
                         <a href='#experience'>Experience</a>
-                        <a href='#projects'>Projects</a>
+                        <a href='#hobbies'>Other Stuff</a>
                     </nav>
                     <div className='hidden flex-row space-x-4 md:flex'>
-                        <LinkedIn className='h-6 w-6' />
-                        <SiGithub />
+                        <a
+                            href='https://www.linkedin.com/in/elle-aquilina/'
+                            target='_blank'
+                        >
+                            <LinkedIn className='h-6 w-6 fill-current' />
+                        </a>
+                        <a
+                            href='https://github.com/ElleAquilina'
+                            target='_blank'
+                        >
+                            <SiGithub />
+                        </a>
                     </div>
                     <ThemeToggle />
                 </div>
