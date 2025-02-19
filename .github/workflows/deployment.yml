@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
-    - run: cp -r /home/webapp/git-runners/actions-runner/_work/elle-app/elle-app/build/. /var/www/elle-app
+    - run: cp -r /home/app/actions-runner/_work/elle-app/elle-app/build/. /var/www/elle-app
