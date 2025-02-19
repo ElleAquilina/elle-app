@@ -4,7 +4,7 @@
 @font-face {
     font-family: 'karla';
     font-display: swap;
-    src: url('src/assets/fonts/karla.ttf') format('truetype');
+    src: url('../assets/fonts/karla.ttf') format('truetype');
 }
 @font-face {
     font-family: 'mukta';
@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('src/assets/fonts/mukta-semibold.ttf') format('truetype');
+    src: url('../assets/fonts/mukta-semibold.ttf') format('truetype');
 }
 
 @layer base {
