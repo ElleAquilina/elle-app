@@ -79,10 +79,10 @@ function Home() {
                     <h5>Junior Developer</h5>
                     <p>
                         A Canadian-based company with a product focusing on
-                        government grants online applications and management
-                        with a Microsoft-based full-stack solution. I worked
-                        with legacy technologies and integrating into systems
-                        like Microsoft Dyanmics CRM.
+                        government grants. It handled online applications and
+                        management with a Microsoft-based full-stack solution. I
+                        worked with legacy technologies and integrating into
+                        systems like Microsoft Dyanmics CRM.
                     </p>
                     <br />
                     <h5>Main Technologies:</h5>
@@ -90,12 +90,13 @@ function Home() {
                     <br />
                     <h5>Technical Writer</h5>
                     <p>
-                        My first job out of college, I was hired as a technical
-                        writer to document. I was lucky to be given a lot of
-                        freedom, and over the course of a few months I made
+                        My first job out of college- I was hired as a technical
+                        writer to write documentation for over 10 years of
+                        technical software debt. I was lucky to be given a lot
+                        independence, and over the course of a few months I made
                         different written and visual materials including guides,
-                        digrams, and FAQ/help desk materials, as well as styling
-                        protocols for documents and communications.
+                        diagrams, and FAQ/help desk materials, as well as
+                        styling protocols.
                     </p>
                 </div>
             ),
@@ -276,28 +277,30 @@ function Home() {
                             </div>
                         </div>
                         <p>
-                            I spent years of having multiple copies of
-                            everything- documents, photos, videos- on various
-                            hard drives, Google drives, and iClouds. It was
-                            always a mess to scan and store new documents,
-                            especially if following the 3-2-1 rule. After
+                            I spent years of having copies of everything-
+                            documents, photos, videos- on various hard drives.
+                            It was always a mess to store new documents,
+                            especially while following the 3-2-1 rule. After
                             completing my network upgrade, I looked at how I
                             stored everything. Is there a better way? Of course
                             there is.
                         </p>
                         <br />
                         <p>
-                            I purchased a few Dell Optiplex Micro boxes, and set
+                            I purchased some Dell Optiplex Micro boxes, and set
                             them up to run as a cluster using Proxmox
-                            (virtualization like VMWare). It runs some terabytes
-                            of storage, some 200gb of RAM, and a cute 12CPU
-                            cores.
+                            (virtualization like VMWare). It allows me to
+                            self-host an ever-growing number of services,
+                            including hosting this website!
                         </p>
-                        <br />
                         <p>
-                            With that, I was able to set up a bunch of
-                            ever-growing services, including hosting this
-                            website!
+                            And if you're curious; this website is hosted on the
+                            internet through a few different hoops. Cloudflare
+                            handles DNS, which sends it to my Oracle Cloud VPS.
+                            From there, my VPS has a wireguard VPN that reverse
+                            proxies the request to my Proxmox Linux Container
+                            (LXC), which hosts my website on Caddy (NGINX/Apache
+                            alternative).
                         </p>
                     </div>
                 </div>
