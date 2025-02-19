@@ -4,13 +4,20 @@ import Typewriter from '@/components/typewriter'
 import Waves from '@/components/waves'
 import Blobs from '@/components/blobs'
 import Timeline from '@/components/timeline'
+import DynamicsCrm from '@/assets/icons/dynamics-crm'
+import SqlServer from '@/assets/icons/sql-server'
+import VisualBasic from '@/assets/icons/visual-basic'
+import VisualStudio from '@/assets/icons/visual-studio'
+import CSharp from '@/assets/icons/c-sharp'
 import Programmer from '@/assets/images/programmer.svg'
 import UpdatedResume from '@/assets/images/updated-resume.svg'
 import NewMessage from '@/assets/images/new-message.svg'
 import Server from '@/assets/images/server.jpg'
+import Proxmox from '@/assets/images/proxmox.png'
 import { motion } from 'framer-motion'
-import { ChevronDown, Linkedin, Send } from 'lucide-react'
+import { ChevronDown, Send, Mail } from 'lucide-react'
 import Java from '@/assets/icons/java'
+import LinkedIn from '@/assets/icons/linkedin'
 import {
     SiJavascript,
     SiAngular,
@@ -34,6 +41,14 @@ function Home() {
         { icon: AWS, name: 'AWS' },
         { icon: SiJira, name: 'Jira Pipelines' },
         { icon: SiGit, name: 'Git' },
+    ]
+
+    const eperformanceIcons = [
+        { icon: VisualBasic, name: 'Visual Basic' },
+        { icon: DynamicsCrm, name: 'Dynamics CRM' },
+        { icon: SqlServer, name: 'Microsoft SQL Server' },
+        { icon: VisualStudio, name: 'Visual Studio' },
+        { icon: CSharp, name: 'C#' },
     ]
 
     const timelineData = [
@@ -69,6 +84,9 @@ function Home() {
                         with legacy technologies and integrating into systems
                         like Microsoft Dyanmics CRM.
                     </p>
+                    <br />
+                    <h5>Main Technologies:</h5>
+                    <IconList data={eperformanceIcons} size='35' />
                     <br />
                     <h5>Technical Writer</h5>
                     <p>
@@ -195,24 +213,6 @@ function Home() {
                 <Timeline data={timelineData} />
             </div>
             <div
-                id='projects'
-                className='bg-surface/50 flex flex-col space-x-[10%] p-[10%] md:flex-row xl:px-[15%]'
-            >
-                <div className='m-0 min-w-1/4 p-0'>
-                    <h4 className='text-primary whitespace-nowrap'>
-                        &#62; PROJECTS
-                    </h4>
-                    <p>
-                        This website is made with Vite, React, and TailwindCSS.
-                        It uses CI/CD through Github, Github Actions, and
-                        Runners. I run a Ubuntu LXC that hosts my runner, and
-                        deploys it to a Caddy server. My Caddy server also is
-                        used as a reverse proxy, and through Cloudflare I'm able
-                        to server this to the world!
-                    </p>
-                </div>
-            </div>
-            <div
                 id='hobbies'
                 className='bg-surface/50 flex flex-col space-x-[10%] p-[10%] md:flex-row xl:px-[20%]'
             >
@@ -224,6 +224,18 @@ function Home() {
                 <div className='flex flex-col'>
                     <div>
                         <h3>Networking</h3>
+                        <div className='relative float-left mr-5 mb-2'>
+                            <div className='overflow-hidden rounded-xl border'>
+                                <img
+                                    src={Server}
+                                    alt='Close up image of my home server rack.'
+                                    className='w-80'
+                                />
+                            </div>
+                            <div className='absolute inset-x-0 bottom-2 text-center text-white'>
+                                My home server rack
+                            </div>
+                        </div>
                         <p>
                             It's no shock to anyone that most ISPs supplied
                             routers don't do a great job at getting a WiFi
@@ -251,14 +263,18 @@ function Home() {
                             internet access?), and documented it all on a Netbox
                             instance that I self-host. Overkill? Probably.
                         </p>
-                        <img
-                            src={Server}
-                            alt='Close up image of my home server rack.'
-                            className='w-80'
-                        />
                     </div>
                     <div>
                         <h3>Self-Hosting</h3>
+                        <div className='mb-2'>
+                            <div className='overflow-hidden rounded-xl border'>
+                                <img
+                                    src={Proxmox}
+                                    alt='Proxmox cluster dashboard.'
+                                    className='w-full'
+                                />
+                            </div>
+                        </div>
                         <p>
                             I spent years of having multiple copies of
                             everything- documents, photos, videos- on various
@@ -284,9 +300,6 @@ function Home() {
                             website!
                         </p>
                     </div>
-                    <div>
-                        <h5>Photography</h5>
-                    </div>
                 </div>
             </div>
             <div
@@ -305,13 +318,23 @@ function Home() {
                         <p>
                             Contact me by email or connect with me on LinkedIn!
                         </p>
-                        <Linkedin />
+                        <div className='flex space-x-2 pt-2'>
+                            <a href='mailto:eliah.aquilina@gmail.com'>
+                                <Mail className='h-10 w-10' />
+                            </a>
+                            <a
+                                href='https://www.linkedin.com/in/elle-aquilina/'
+                                target='_blank'
+                            >
+                                <LinkedIn className='h-10 w-10' />
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div className='self-center'>
+                <div className=''>
                     <img
                         src={NewMessage}
-                        alt='Illustration of envelopes with woman beside them'
+                        alt='Illustration of envelopes'
                         className='w-60'
                     />
                 </div>
