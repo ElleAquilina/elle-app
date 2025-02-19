@@ -3,15 +3,15 @@ import { ReactTyped } from 'react-typed'
 
 function Typewriter({ useColors }: { useColors: boolean }) {
     const typewriterText = [
-        'full-stack development',
+        'front-end development',
         'back-end development',
         'web design',
         'home servers &#38; networking',
         'self hosting',
         'photography',
-        'baking',
-        'creating',
         'self-teaching',
+        'breaking things',
+        'fixing things',
     ]
 
     const typewriterColors = ['text-primary', 'text-secondary', 'text-accent']
